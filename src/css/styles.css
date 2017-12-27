@@ -1,0 +1,24 @@
+/* ---------------------------------------------------
+
+WoW Toys
+
+--------------------------------------------------- */
+
+:root {
+  --cbg: #333;
+  --ctxt: #fff;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  background: var(--cbg);
+}
+
+h1 {
+  margin: 1rem;
+
+  color: var(--ctxt);
+  font-family: sans-serif;
+}
