@@ -7,8 +7,17 @@
   "author": "Craig Fox",
   "license": "Apache-2.0",
   "dependencies": {
-    "babel": "^6.23.0",
-    "sass": "^1.0.0-beta.4",
     "vue": "^2.5.13"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.10.0"
   }
 }
