@@ -1,0 +1,23 @@
+{
+  "name": "wowtoys",
+  "version": "1.0.0",
+  "description": "A vue.js app to show what toys your World of Warcraft Character has and which they are missing",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craigwfox/wowtoys.git"
+  },
+  "author": "Craig Fox",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/craigwfox/wowtoys/issues"
+  },
+  "homepage": "https://github.com/craigwfox/wowtoys#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
