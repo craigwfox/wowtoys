@@ -5,20 +5,53 @@ WoW Toys
 --------------------------------------------------- */
 
 :root {
-  --cbg: #333;
-  --ctxt: #fff;
+  --cbg: #efefef;
+  --ctxt: #222;
+  --mainclr: #333;
 }
+
+* {
+  box-sizing:border-box;
+}
+
 
 body {
   display: flex;
   flex-direction: column;
 
-  background: var(--cbg);
+  font-family: 'Lato', sans-serif;
 }
 
-h1 {
-  margin: 1rem;
 
-  color: var(--ctxt);
-  font-family: sans-serif;
+/* --------------------
+Site Header
+-------------------- */
+.site-header h1 {
+  margin: 0;
+
+  font-weight: 700;
+}
+
+
+
+/* --------------------
+Inputs
+-------------------- */
+.input {
+  max-width: 300px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.input + .input {
+  margin-top: 1.5rem;
+}
+
+.input + input[type=submit] {
+  margin-top: 1rem;
+
+  background: var(--mainclr);
+
+  color: #fff;
 }

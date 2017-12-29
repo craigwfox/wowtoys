@@ -1,1 +1,3 @@
-console.log('Hello from Webpack');
+document.querySelector('body').addEventListener('click', ()=> {
+  window.console.log('hello world');
+})

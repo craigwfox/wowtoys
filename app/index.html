@@ -5,9 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>WoW Toys</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 </head>
 <body>
-  <h1>Hello World</h1>
+  <header class="site-header">
+    <h1 class="site-logo"><a href="/">WoW Toys</a></h1>
+  </header>
+  <div class="content">
+    <section class="char-import">
+      <h2>Import you character</h2>
+      <div class="input">
+        <label for="select-region">Select region</label>
+        <select name="select-region" id="select-region">
+          <option value="">-select-</option>
+          <option value="">US</option>
+          <option value="">EU</option>
+        </select>
+      </div>
+      <div class="input">
+        <label for="select-realm">Select realm</label>
+        <select name="select-realm" id="select-realm">
+          <option value="">-select-</option>
+          <option value="">Thrall</option>
+        </select>
+      </div>
+      <div class="input">
+        <label for="character-name">Character name</label>
+        <input type="text" value="chracter-name">
+      </div>
+      <input type="submit" value="import">
+    </section>
+    <div id="my_view">
+    </div>
+  </div>
+  <footer class="site-footer">
+    <p>&copy; Craig Fox | <a href="#0">View on Github</a></p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script>
+    // var myViewModel = new Vue({
+    //   el: '#my_view',
+    //   data: {
+    //     results: []
+    //   },
+    //   mounted() {
+    //     axios.get("https://us.api.battle.net/data/wow/realm/?namespace=dynamic-us&locale=en_US&access_token=6233n4nhx54r7ctw36j7xy7f")
+    //       .then(response => { this.results = response.data.results })
+    //   }
+    // });
+    // console.log(myViewModel.data);
+
+    const url = 'https://us.api.battle.net/data/wow/realm/?namespace=dynamic-us&locale=en_US&access_token=6233n4nhx54r7ctw36j7xy7f';
+    let realmlist = [];
+    fetch(url)
+      .then((resp) => resp.json())
+      .then(function (data) {
+        console.log(data.realms);
+        let realmsArry = data.realms;
+        for (let realm = 0; realm < realmsArry.length; realm++) {
+          realmlist.push([realmsArry[realm].name, realmsArry[realm].id]);         
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+      console.log(realmlist);
+  </script>
 </body>
 </html>

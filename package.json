@@ -15,14 +15,24 @@
   "bugs": {
     "url": "https://github.com/craigwfox/wowtoys/issues"
   },
+  "browserslist": [
+    "> 1%"
+  ],
   "homepage": "https://github.com/craigwfox/wowtoys#readme",
   "devDependencies": {
     "autoprefixer": "^7.2.3",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.21.0",
     "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
     "gulp-postcss": "^7.0.0",
     "gulp-sourcemaps": "^2.6.2",
     "postcss-cssnext": "^3.0.2",
+    "postcss-normalize": "^4.0.0",
     "precss": "^2.0.0"
+  },
+  "dependencies": {
+    "cssnano": "^3.10.0"
   }
 }
