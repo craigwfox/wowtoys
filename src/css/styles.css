@@ -37,20 +37,67 @@ Site Header
 /* --------------------
 Inputs
 -------------------- */
-.input {
+/* --- Form input --- */
+.form-input {
   max-width: 300px;
 
   display: flex;
   flex-direction: column;
 }
 
-.input + .input {
+.form-input + .form-input {
   margin-top: 1.5rem;
 }
 
-.input + input[type=submit] {
+.form-input + input[type=submit] {
   margin-top: 1rem;
+}
 
+/* --- Form control --- */
+.form-control {
+  height: 2.75rem;
+
+  padding: 0 .25rem;
+
+  background: #fff;
+  border: 1px solid #666;
+  border-radius: .25rem;
+
+  line-height: 2.75rem;
+}
+
+.form-control:not(select) {
+  padding: 0 .75rem;
+}
+
+.form-select {
+  position: relative;
+}
+
+.form-select::after {
+  content: '\203A';
+
+  position: absolute;
+  top: .5rem;
+  right: .75rem;
+
+  transform: rotate(90deg);
+
+  font-size: 1.5rem;
+}
+
+.form-select select {
+  width: 100%;
+
+  display: block;
+
+  appearance: none;
+}
+
+input[type=submit] {
+  padding: .5rem 1rem;
+
+  border: 0;
   background: var(--mainclr);
 
   color: #fff;

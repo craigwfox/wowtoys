@@ -30,9 +30,7 @@
     "gulp-sourcemaps": "^2.6.2",
     "postcss-cssnext": "^3.0.2",
     "postcss-normalize": "^4.0.0",
-    "precss": "^2.0.0"
-  },
-  "dependencies": {
+    "precss": "^2.0.0",
     "cssnano": "^3.10.0"
   }
 }
